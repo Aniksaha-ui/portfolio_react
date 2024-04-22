@@ -125,7 +125,6 @@ $(function () {
     delay: 100,
     time: 3000
   });
-  debugger;
   // Latest Room Slider
   var roomArrow = $('.room-arrows');
   var $status = $('.page-Info');

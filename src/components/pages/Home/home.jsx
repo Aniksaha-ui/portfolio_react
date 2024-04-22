@@ -4,6 +4,7 @@ import WhyChooseUs from "./whychoose";
 import AboutUs from "./aboutUs";
 import Services from "./services";
 import Learning from "./learning";
+import LatestBlog from "./LatestBlog";
 
 const Home = () =>{
   const api = useApi();
@@ -11,6 +12,7 @@ const Home = () =>{
   const [aboutUsSection,setAboutUsSection] = useState({});
   const [services,setServices]=useState([]);
   const [learning,setLearning] = useState([]);
+  const [latestBlogs,setLatestBlog] = useState([]);
   const [loading,setLoading] = useState(true);
     useEffect(()=>{
       fetchData();
@@ -22,7 +24,8 @@ const Home = () =>{
           await setServiceSection(homePageInformation.whyus);
           await setAboutUsSection(homePageInformation.aboutUs);
           await setServices(homePageInformation.ourservices);
-          await setLearning(homePageInformation.learnings)
+          await setLearning(homePageInformation.learnings);
+          await setLatestBlog(homePageInformation.latestBlogs);
           setLoading(false);
       } else {
         console.log(homePageInformation,"1111")
@@ -156,142 +159,17 @@ const Home = () =>{
     </div>
   </section>
   {/* Call To Action End */}
-  {/* Package Section Start */}
-  <section className="ma-package-section section-padding featured-packages">
-    <div className="container">
-      {/* Section Title */}
-      <div className="section-title text-center">
-        <div className="row justify-content-center">
-          <div className="col-lg-7">
-            <span className="title-top">Featured Tour Packages</span>
-            <h1>Take a Look at Our Awesome Packages</h1>
-          </div>
-        </div>
-      </div>
-      {/* Package Boxes */}
-      <div className="row">
-        <div className="col-lg-6">
-          <div className="packages-post-item">
-            <a className="post-thumbnail d-block" href="package_details/15/usa---western-wonders-(cosmos).html">
-              <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/packages/1623598494.jpg" alt="package img" />
-            </a>
-            <div className="entry-content">
-              <h3 className="title">
-                <a href="package_details/15/usa---western-wonders-(cosmos).html">USA - Western Wonders (Cosmos)</a>
-              </h3>
-              <div className="post-meta">
-                <ul>
-                  <li><span><i className="fas fa-comment-dollar" /><strong>Package Price:</strong> $ 120.00  (FIXED)</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Number of Days:</strong> 3</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Maximum Persons:</strong> 5</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="packages-post-item">
-            <a className="post-thumbnail d-block" href="package_details/16/grand-bargain-tour-of-usa-(holiday-saving-account).html">
-              <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/packages/1623598923.jpg" alt="package img" />
-            </a>
-            <div className="entry-content">
-              <h3 className="title">
-                <a href="package_details/16/grand-bargain-tour-of-usa-(holiday-saving-account).html">Grand Bargain Tour Of USA (Holiday Saving Account)</a>
-              </h3>
-              <div className="post-meta">
-                <ul>
-                  <li><span><i className="fas fa-comment-dollar" /><strong>Package Price:</strong> $ 40.00  (PER-PERSON)</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Number of Days:</strong> 1</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Maximum Persons:</strong> 6</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="packages-post-item">
-            <a className="post-thumbnail d-block" href="package_details/17/customizable---las-vegas---a-la-carte.html">
-              <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/packages/1623599177.jpg" alt="package img" />
-            </a>
-            <div className="entry-content">
-              <h3 className="title">
-                <a href="package_details/17/customizable---las-vegas---a-la-carte.html">Customizable - Las Vegas - A La Carte</a>
-              </h3>
-              <div className="post-meta">
-                <ul>
-                  <li><span><i className="fas fa-comment-dollar" /><strong>Package Price:</strong> NEGOTIABLE</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Number of Days:</strong> 3</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Maximum Persons:</strong> 7</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="packages-post-item">
-            <a className="post-thumbnail d-block" href="package_details/18/orlando---ala-carte.html">
-              <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/packages/1623599575.jpg" alt="package img" />
-            </a>
-            <div className="entry-content">
-              <h3 className="title">
-                <a href="package_details/18/orlando---ala-carte.html">Orlando - Ala Carte</a>
-              </h3>
-              <div className="post-meta">
-                <ul>
-                  <li><span><i className="fas fa-comment-dollar" /><strong>Package Price:</strong> $ 180.00  (FIXED)</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Number of Days:</strong> 5</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Maximum Persons:</strong> 5</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="packages-post-item">
-            <a className="post-thumbnail d-block" href="package_details/19/miami---a-la-carte.html">
-              <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/packages/1623600032.jpg" alt="package img" />
-            </a>
-            <div className="entry-content">
-              <h3 className="title">
-                <a href="package_details/19/miami---a-la-carte.html">Miami - A La Carte</a>
-              </h3>
-              <div className="post-meta">
-                <ul>
-                  <li><span><i className="fas fa-comment-dollar" /><strong>Package Price:</strong> $ 30.00  (PER-PERSON)</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Number of Days:</strong> 1</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Maximum Persons:</strong> 3</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="packages-post-item">
-            <a className="post-thumbnail d-block" href="package_details/20/san-francisco---a-la-carte.html">
-              <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/packages/1623602478.jpg" alt="package img" />
-            </a>
-            <div className="entry-content">
-              <h3 className="title">
-                <a href="package_details/20/san-francisco---a-la-carte.html">San Francisco - A La Carte</a>
-              </h3>
-              <div className="post-meta">
-                <ul>
-                  <li><span><i className="fas fa-comment-dollar" /><strong>Package Price:</strong> $ 20.00  (PER-PERSON)</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Number of Days:</strong> 6</span></li>
-                  <li><span><i className="fas fa-users" /><strong>Maximum Persons:</strong> 4</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* Package Section End */}
+  {/* Latest Blogs Section Start */}
+      <LatestBlog latestBlogs={latestBlogs}/>
+  {/* Latest Blogs Section End */}
   {/* Why Choose Us/Facility Section Start */}
       <WhyChooseUs serviceSection={serviceSection}/>
   {/* Why Choose Us/Facility Section End */}
-  {/* Feedback Section Start */}
+  {/* Feedback Section Start 
+  
+  
+  
+  */}
   <section className="feedback-section section-padding">
     <div className="container">
       {/* Section Title */}
