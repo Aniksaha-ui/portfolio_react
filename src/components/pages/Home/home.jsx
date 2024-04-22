@@ -3,12 +3,14 @@ import useApi from "../../../services/hooks/useApi";
 import WhyChooseUs from "./whychoose";
 import AboutUs from "./aboutUs";
 import Services from "./services";
+import Learning from "./learning";
 
 const Home = () =>{
   const api = useApi();
   const [serviceSection,setServiceSection] = useState({});
   const [aboutUsSection,setAboutUsSection] = useState({});
   const [services,setServices]=useState([]);
+  const [learning,setLearning] = useState([]);
   const [loading,setLoading] = useState(true);
     useEffect(()=>{
       fetchData();
@@ -20,6 +22,7 @@ const Home = () =>{
           await setServiceSection(homePageInformation.whyus);
           await setAboutUsSection(homePageInformation.aboutUs);
           await setServices(homePageInformation.ourservices);
+          await setLearning(homePageInformation.learnings)
           setLoading(false);
       } else {
         console.log(homePageInformation,"1111")
@@ -126,160 +129,7 @@ const Home = () =>{
     <AboutUs aboutUsSection={aboutUsSection}/>
   {/* Welcome Section End */}
   {/* Latest Room Section Start */}
-  <section className="latest-room section-bg section-padding">
-    <div className="container-fluid">
-      <div className="row align-items-center no-gutters">
-        <div className="col-lg-3">
-          {/* Section Title */}
-          <div className="section-title">
-            <span className="title-top with-border">Featured Rooms</span>
-            <h1>Modern Hotel &amp; Room For Luxury Living</h1>
-            <p>Ullam corporis suscipit laboriosam nisi ut aliqucoe modi consequatur Quis autem vel eum iure repreh nderitqui in ea voluptate velit esse quam nihil molestiae</p>
-            {/* Page Info */}
-            <div className="page-Info" />
-            {/* Room Arrow */}
-            <div className="room-arrows" />
-          </div>
-        </div>
-        <div className="col-lg-8 offset-lg-1">
-          <div className="latest-room-slider" id="roomSliderActive">
-            <div className="single-room">
-              <a className="room-thumb d-block" href="room_details/31/four-points-by-sheraton-manhattan-midtown-west.html">
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/rooms/1623648535.jpg" alt />
-                <div className="room-price">
-                  <p>$ 20.00  / Night</p>
-                </div>
-              </a>
-              <div className="room-desc">
-                <div className="room-cat">
-                  <a className="d-block p-0" href="rooms9a33.html?category=9">Regular Room</a>
-                </div>
-                <h4>
-                  <a href="room_details/31/four-points-by-sheraton-manhattan-midtown-west.html">Four Points by Sheraton Manhattan Midtown West</a>
-                </h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
-                <ul className="room-info">
-                  <li><i className="far fa-bed" />2 Beds</li>
-                  <li><i className="far fa-bath" />2 Baths</li>
-                  <li><i className="far fa-users" />4 Guests</li>
-                </ul>
-              </div>
-            </div>
-            <div className="single-room">
-              <a className="room-thumb d-block" href="room_details/32/hyatt-place-new-york-citytimes-square.html">
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/rooms/1623649132.jpg" alt />
-                <div className="room-price">
-                  <p>$ 30.00  / Night</p>
-                </div>
-              </a>
-              <div className="room-desc">
-                <div className="room-cat">
-                  <a className="d-block p-0" href="rooms9a33.html?category=9">Regular Room</a>
-                </div>
-                <h4>
-                  <a href="room_details/32/hyatt-place-new-york-citytimes-square.html">Hyatt Place New York City/Times Square</a>
-                </h4>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                <ul className="room-info">
-                  <li><i className="far fa-bed" />1 Bed</li>
-                  <li><i className="far fa-bath" />1 Bath</li>
-                  <li><i className="far fa-users" />2 Guests</li>
-                </ul>
-              </div>
-            </div>
-            <div className="single-room">
-              <a className="room-thumb d-block" href="room_details/33/m-social-hotel-times-square-new-york.html">
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/rooms/1623649430.jpg" alt />
-                <div className="room-price">
-                  <p>$ 30.00  / Night</p>
-                </div>
-              </a>
-              <div className="room-desc">
-                <div className="room-cat">
-                  <a className="d-block p-0" href="rooms25f6.html?category=10">Deluxe Room</a>
-                </div>
-                <h4>
-                  <a href="room_details/33/m-social-hotel-times-square-new-york.html">M Social Hotel Times Square New York</a>
-                </h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-                <ul className="room-info">
-                  <li><i className="far fa-bed" />4 Beds</li>
-                  <li><i className="far fa-bath" />2 Baths</li>
-                  <li><i className="far fa-users" />8 Guests</li>
-                </ul>
-              </div>
-            </div>
-            <div className="single-room">
-              <a className="room-thumb d-block" href="room_details/34/iroquois-new-york-times-square.html">
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/rooms/1623649643.jpg" alt />
-                <div className="room-price">
-                  <p>$ 40.00  / Night</p>
-                </div>
-              </a>
-              <div className="room-desc">
-                <div className="room-cat">
-                  <a className="d-block p-0" href="roomsefaf.html?category=11">Suite</a>
-                </div>
-                <h4>
-                  <a href="room_details/34/iroquois-new-york-times-square.html">Iroquois New York Times Square</a>
-                </h4>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking</p>
-                <ul className="room-info">
-                  <li><i className="far fa-bed" />3 Beds</li>
-                  <li><i className="far fa-bath" />2 Baths</li>
-                  <li><i className="far fa-users" />7 Guests</li>
-                </ul>
-              </div>
-            </div>
-            <div className="single-room">
-              <a className="room-thumb d-block" href="room_details/35/hampton-inn-times-square-central.html">
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/rooms/1623649980.jpg" alt />
-                <div className="room-price">
-                  <p>$ 50.00  / Night</p>
-                </div>
-              </a>
-              <div className="room-desc">
-                <div className="room-cat">
-                  <a className="d-block p-0" href="rooms25f6.html?category=10">Deluxe Room</a>
-                </div>
-                <h4>
-                  <a href="room_details/35/hampton-inn-times-square-central.html">Hampton Inn Times Square Central</a>
-                </h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-                <ul className="room-info">
-                  <li><i className="far fa-bed" />1 Bed</li>
-                  <li><i className="far fa-bath" />1 Bath</li>
-                  <li><i className="far fa-users" />2 Guests</li>
-                </ul>
-              </div>
-            </div>
-            <div className="single-room">
-              <a className="room-thumb d-block" href="room_details/43/hotel-shalimar-motijheel---centre-of-city.html">
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/rooms/1640079042.jpg" alt />
-                <div className="room-price">
-                  <p>$ 20.00  / Night</p>
-                </div>
-              </a>
-              <div className="room-desc">
-                <div className="room-cat">
-                  <a className="d-block p-0" href="rooms25f6.html?category=10">Deluxe Room</a>
-                </div>
-                <h4>
-                  <a href="room_details/43/hotel-shalimar-motijheel---centre-of-city.html">Hotel Shalimar Motijheel - Centre of City</a>
-                </h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                <ul className="room-info">
-                  <li><i className="far fa-bed" />4 Beds</li>
-                  <li><i className="far fa-bath" />3 Baths</li>
-                  <li><i className="far fa-users" />20 Guests</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <Learning learnings={learning}/>
   {/* Latest Room Section End */}
   {/* Service Section Start */}
     <Services services={services}/>

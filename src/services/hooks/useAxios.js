@@ -4,9 +4,10 @@ import {
   LOGIN_ERROR,
   NETWORK_ERROR,
 } from "../common/error-status";
+import { BASE_URL } from "../common/constants";
 
 const useAxios = () => {
-  const axiosConfig = { baseURL: "http://127.0.0.1:8000/" };
+  const axiosConfig = { baseURL: BASE_URL };
   const api = axios.create(axiosConfig);
 
   api.interceptors.request.use((axiosConfig) => {
