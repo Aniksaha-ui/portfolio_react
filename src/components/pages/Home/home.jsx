@@ -5,6 +5,8 @@ import AboutUs from "./aboutUs";
 import Services from "./services";
 import Learning from "./learning";
 import LatestBlog from "./LatestBlog";
+import Loading from "../common/loading";
+import Banner from "./banner";
 
 const Home = () =>{
   const api = useApi();
@@ -26,53 +28,24 @@ const Home = () =>{
           await setServices(homePageInformation.ourservices);
           await setLearning(homePageInformation.learnings);
           await setLatestBlog(homePageInformation.latestBlogs);
-          setLoading(false);
+          // await setLoading(false);
       } else {
         console.log(homePageInformation,"1111")
       }
     }
 
+    // if(loading){
+    //   return <Loading/>
+    // }
+
+
     return (
   <main>
   {/* Hero Section Start */}
-  <section className="hero-section" id="heroSlideActive">
-    <div className="single-hero-slide bg-img-center d-flex align-items-center text-center lazy" data-bg="assets/img/hero_slider/1623595517.jpg">
-      <div className="container">
-        <div className="slider-text">
-          <span className="small-text" data-animation="fadeInDown" data-delay=".3s">Welcome to Hotelia</span>
-          <h1 data-animation="fadeInLeft" data-delay=".6s">Luxury Living</h1>
-          <a className="btn filled-btn" href="http://example.com/" data-animation="fadeInUp" data-delay=".9s">
-            get started <i className="far fa-long-arrow-right" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div className="single-hero-slide bg-img-center d-flex align-items-center text-center lazy" data-bg="assets/img/hero_slider/1623595549.jpg">
-      <div className="container">
-        <div className="slider-text">
-          <span className="small-text" data-animation="fadeInDown" data-delay=".3s">Welcome to Hotelia</span>
-          <h1 data-animation="fadeInLeft" data-delay=".6s">Luxury Living</h1>
-          <a className="btn filled-btn" href="http://example.com/" data-animation="fadeInUp" data-delay=".9s">
-            get started <i className="far fa-long-arrow-right" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div className="single-hero-slide bg-img-center d-flex align-items-center text-center lazy" data-bg="assets/img/hero_slider/1623595697.jpg">
-      <div className="container">
-        <div className="slider-text">
-          <span className="small-text" data-animation="fadeInDown" data-delay=".3s">Welcome to Hotelia</span>
-          <h1 data-animation="fadeInLeft" data-delay=".6s">Luxury Living</h1>
-          <a className="btn filled-btn" href="http://example.com/" data-animation="fadeInUp" data-delay=".9s">
-            get started <i className="far fa-long-arrow-right" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+      <Banner />
   {/* Hero Section End */}
   {/* Booking Search Form Start */}
-  <section className="booking-section">
+  {/* <section className="booking-section">
     <div className="container">
       <div className="booking-form-wrap bg-img-center section-bg">
         <form action="https://codecanyon.kreativdev.com/hotelia/demo/rooms" method="GET">
@@ -126,7 +99,7 @@ const Home = () =>{
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
   {/* Booking Search Form End */}
   {/* Welcome Section Start */}
     <AboutUs aboutUsSection={aboutUsSection}/>

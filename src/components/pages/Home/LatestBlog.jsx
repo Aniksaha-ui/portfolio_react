@@ -21,7 +21,6 @@ const LatestBlog = ({latestBlogs})=>{
                 <div className="packages-post-item">
                 <a className="post-thumbnail d-block" href="package_details/15/usa---western-wonders-(cosmos).html">
                     <img className="lazy" src={`${BASE_URL}${blog.img}`} alt="package img" />
-                   
                 </a>
                 <div className="entry-content">
                     <h3 className="title">

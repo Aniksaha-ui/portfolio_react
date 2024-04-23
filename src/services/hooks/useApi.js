@@ -175,33 +175,20 @@ const useApi = () => {
 
   /*********************************Home Page Information *************/
   const homePageInformation = async() =>{
-    const response = await axiosClient.apiClient("GET",'api/test');
+    const response = await axiosClient.apiClient("GET",'api/homepage');
     console.log(response,"res")
     return response.data.data;
   }
+
+  /********************************Service Page Information **********/
+  const servicePageInformation = async() =>{
+    const response = await axiosClient.apiClient("GET",'api/service');
+    return response.data.data;
+  }
+
   return {
-    login,
-    getAllCategory,
-    getLocalStorageValue,
-    getTour,
-    getTourById,
-    getApprovedTransaction,
-    getPendingTransaction,
-    getRejectTransaction,
-    getTransactionById,
-    updateTransactionStatus,
-    getAllBooking,
-    getBookingDetails,
-    bookingDetails,
-    tourWiseBookingInfomation,
-    getAllHotels,
-    addHotel,
-    deleteHotel,
-    getAllAccounts,
-    addAccount,
-    getAllDeposite,
-    batchWiseReport,
-    homePageInformation
+    homePageInformation,
+    servicePageInformation
   };
 };
 
