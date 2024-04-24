@@ -20,7 +20,8 @@ const WhyChooseUs = ({serviceSection})=>{
                     <p>Popular Features</p>
                   </div>
                 </div>
-                <img className="lazy" data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/facility_section/1623656923.jpg" alt="image" />
+              <img src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/facility_section/1623656923.jpg" alt="image" />
+
               </div>
             </div>
           </div>

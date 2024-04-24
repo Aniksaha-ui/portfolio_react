@@ -30,7 +30,6 @@ const Home = () =>{
           await setLatestBlog(homePageInformation.latestBlogs);
           // await setLoading(false);
       } else {
-        console.log(homePageInformation,"1111")
       }
     }
 
@@ -111,7 +110,7 @@ const Home = () =>{
     <Services services={services}/>
   {/* Service Section End */}
   {/* Call To Action Start */}
-  <section className="cta-section bg-img-center lazy " data-bg="assets/img/booking-img.jpg">
+  {/* <section className="cta-section bg-img-center lazy " data-bg="assets/img/booking-img.jpg">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-md-10">
@@ -130,7 +129,7 @@ const Home = () =>{
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
   {/* Call To Action End */}
   {/* Latest Blogs Section Start */}
       <LatestBlog latestBlogs={latestBlogs}/>
@@ -172,7 +171,7 @@ const Home = () =>{
   </section>
   {/* Feedback Section End */}
   {/* Brands Section Start */}
-  <section className="brands-section primary-bg">
+  {/* <section className="brands-section primary-bg">
     <div className="container">
       <div id="brandsSlideActive" className="row">
         <a className="brand-item text-center d-block" href="http://example.com/" target="_blank">
@@ -198,7 +197,7 @@ const Home = () =>{
         </a>
       </div>
     </div>
-  </section>
+  </section> */}
   {/* Brands Section End */}
 </main>
 
