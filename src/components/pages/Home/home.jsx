@@ -8,43 +8,42 @@ import LatestBlog from "./LatestBlog";
 import Loading from "../common/loading";
 import Banner from "./banner";
 
-const Home = () =>{
+const Home = () => {
   const api = useApi();
-  const [serviceSection,setServiceSection] = useState({});
-  const [aboutUsSection,setAboutUsSection] = useState({});
-  const [services,setServices]=useState([]);
-  const [learning,setLearning] = useState([]);
-  const [latestBlogs,setLatestBlog] = useState([]);
-  const [loading,setLoading] = useState(true);
-    useEffect(()=>{
-      fetchData();
-    },[])
+  const [serviceSection, setServiceSection] = useState({});
+  const [aboutUsSection, setAboutUsSection] = useState({});
+  const [services, setServices] = useState([]);
+  const [learning, setLearning] = useState([]);
+  const [latestBlogs, setLatestBlog] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-    const fetchData = async () =>{
-      const homePageInformation = await api.homePageInformation();
-      if(homePageInformation){
-          await setServiceSection(homePageInformation.whyus);
-          await setAboutUsSection(homePageInformation.aboutUs);
-          await setServices(homePageInformation.ourservices);
-          await setLearning(homePageInformation.learnings);
-          await setLatestBlog(homePageInformation.latestBlogs);
-          // await setLoading(false);
-      } else {
-      }
+  const fetchData = async () => {
+    const homePageInformation = await api.homePageInformation();
+    if (homePageInformation) {
+      await setServiceSection(homePageInformation.whyus);
+      await setAboutUsSection(homePageInformation.aboutUs);
+      await setServices(homePageInformation.ourservices);
+      await setLearning(homePageInformation.learnings);
+      await setLatestBlog(homePageInformation.latestBlogs);
+      // await setLoading(false);
+    } else {
     }
+  };
 
-    // if(loading){
-    //   return <Loading/>
-    // }
+  // if(loading){
+  //   return <Loading/>
+  // }
 
-
-    return (
-  <main>
-  {/* Hero Section Start */}
+  return (
+    <main>
+      {/* Hero Section Start */}
       <Banner />
-  {/* Hero Section End */}
-  {/* Booking Search Form Start */}
-  {/* <section className="booking-section">
+      {/* Hero Section End */}
+      {/* Booking Search Form Start */}
+      {/* <section className="booking-section">
     <div className="container">
       <div className="booking-form-wrap bg-img-center section-bg">
         <form action="https://codecanyon.kreativdev.com/hotelia/demo/rooms" method="GET">
@@ -99,18 +98,18 @@ const Home = () =>{
       </div>
     </div>
   </section> */}
-  {/* Booking Search Form End */}
-  {/* Welcome Section Start */}
-    <AboutUs aboutUsSection={aboutUsSection}/>
-  {/* Welcome Section End */}
-  {/* Latest Room Section Start */}
-      <Learning learnings={learning}/>
-  {/* Latest Room Section End */}
-  {/* Service Section Start */}
-    <Services services={services}/>
-  {/* Service Section End */}
-  {/* Call To Action Start */}
-  {/* <section className="cta-section bg-img-center lazy " data-bg="assets/img/booking-img.jpg">
+      {/* Booking Search Form End */}
+      {/* Welcome Section Start */}
+      <AboutUs aboutUsSection={aboutUsSection} />
+      {/* Welcome Section End */}
+      {/* Latest Room Section Start */}
+      <Learning learnings={learning} />
+      {/* Latest Room Section End */}
+      {/* Service Section Start */}
+      <Services services={services} />
+      {/* Service Section End */}
+      {/* Call To Action Start */}
+      {/* <section className="cta-section bg-img-center lazy " data-bg="assets/img/booking-img.jpg">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-md-10">
@@ -130,48 +129,22 @@ const Home = () =>{
       </div>
     </div>
   </section> */}
-  {/* Call To Action End */}
-  {/* Latest Blogs Section Start */}
-      <LatestBlog latestBlogs={latestBlogs}/>
-  {/* Latest Blogs Section End */}
-  {/* Why Choose Us/Facility Section Start */}
-      <WhyChooseUs serviceSection={serviceSection}/>
-  {/* Why Choose Us/Facility Section End */}
-  {/* Feedback Section Start 
+      {/* Call To Action End */}
+      {/* Latest Blogs Section Start */}
+      <LatestBlog latestBlogs={latestBlogs} />
+      {/* Latest Blogs Section End */}
+      {/* Why Choose Us/Facility Section Start */}
+      <WhyChooseUs serviceSection={serviceSection} />
+      {/* Why Choose Us/Facility Section End */}
+      {/* Feedback Section Start 
   
   
   
   */}
-  <section className="feedback-section section-padding">
-    <div className="container">
-      {/* Section Title */}
-      <div className="section-title text-center">
-        <div className="row justify-content-center">
-          <div className="col-lg-7">
-            <span className="title-top">Clients Feedback</span>
-            <h1>What Our Satisfied Clients Say About Us</h1>
-          </div>
-        </div>
-      </div>
-      <div className="feadback-slide" id="feedbackSlideActive">
-        <div className="single-feedback-box">
-          <p>Omnis voluptas assumde est omnis dolor reporibus autem quidam et aut ciise debitiset arerum neces tibus saep on ways feels like ways.</p>
-          <h5 className="feedback-author">James M. Varney</h5>
-        </div>
-        <div className="single-feedback-box">
-          <p>At vero eos et accusamu way set iusto odio dignis ducimus qui bpraes enum voluptatum deleniti atque corrupti quos dolores others worlds.</p>
-          <h5 className="feedback-author">David K. Vinson</h5>
-        </div>
-        <div className="single-feedback-box">
-          <p>Omnis voluptas assumde est omnis dolor reporibus autem quidam et aut ciise debitiset arerum neces tibus saep on ways feels like ways.</p>
-          <h5 className="feedback-author">James M. Varney</h5>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* Feedback Section End */}
-  {/* Brands Section Start */}
-  {/* <section className="brands-section primary-bg">
+
+      {/* Feedback Section End */}
+      {/* Brands Section Start */}
+      {/* <section className="brands-section primary-bg">
     <div className="container">
       <div id="brandsSlideActive" className="row">
         <a className="brand-item text-center d-block" href="http://example.com/" target="_blank">
@@ -198,10 +171,9 @@ const Home = () =>{
       </div>
     </div>
   </section> */}
-  {/* Brands Section End */}
-</main>
-
-    )
-}
+      {/* Brands Section End */}
+    </main>
+  );
+};
 
 export default Home;
