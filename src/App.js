@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home/home";
 import Service from "./components/pages/Service/service";
 import Footer from "./components/common/footer/footer";
+import About from "./components/pages/About/About";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            <Route path="/service" element={<Service />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
         <Footer />

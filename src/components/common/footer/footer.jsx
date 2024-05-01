@@ -1,130 +1,104 @@
 const Footer = () => {
   return (
-    <footer>
-      <div className="container">
-        <div className="footer-top">
-          <div className="row">
-            <div className="col-lg-4 col-md-6">
-              <div className="widget footer-widget">
-                <div className="footer-logo">
-                  <img
-                    className="lazy"
-                    data-src="https://codecanyon.kreativdev.com/hotelia/demo/assets/img/1624260797.png"
-                    alt="footer logo"
-                  />
+    <footer className="w3l-footer-29-main">
+      <div className="footer-29 py-5">
+        <div className="container py-lg-4">
+          <div className="row footer-top-29">
+            <div className="col-lg-9">
+              <div className="row">
+                <div className="col-md-3 col-6 footer-list-29">
+                  <ul>
+                    <h6 className="footer-title-29">Company</h6>
+                    <li>
+                      <a href="services.html">About Our Services</a>
+                    </li>
+                    <li>
+                      <a href="#projects">Our Projects</a>
+                    </li>
+                    <li>
+                      <a href="#blog">View Our Blog</a>
+                    </li>
+                    <li>
+                      <a href="about.html">Check Our Careers</a>
+                    </li>
+                  </ul>
                 </div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry
-                </p>
-                <ul className="social-icons">
-                  <li>
-                    <a href="https://www.facebook.com/">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.google.com/">
-                      <i className="fab fa-google" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com/">
-                      <i className="fab fa-twitter" />
-                    </a>
-                  </li>
-                </ul>
+                <div className="col-md-3 col-6 footer-list-29">
+                  <ul>
+                    <h6 className="footer-title-29">Quick Links</h6>
+                    <li>
+                      <a href="#management">Management</a>
+                    </li>
+                    <li>
+                      <a href="services.html">Department Services</a>
+                    </li>
+                    <li>
+                      <a href="#appointment">Make Appointment</a>
+                    </li>
+                    <li>
+                      <a href="about.html">Our Business Growth</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
+                  <ul>
+                    <h6 className="footer-title-29">Support</h6>
+                    <li>
+                      <a href="#live">Live Chart</a>
+                    </li>
+                    <li>
+                      <a href="#faq">Faq's</a>
+                    </li>
+                    <li>
+                      <a href="#support"> Support</a>
+                    </li>
+                    <li>
+                      <a href="#terms">Terms of Service</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
+                  <h6 className="footer-title-29">More Info</h6>
+                  <ul>
+                    <li>
+                      <a href="#privacy">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#terms"> Terms of Service</a>
+                    </li>
+                    <li>
+                      <a href="contact.html">Contact us</a>
+                    </li>
+                    <li>
+                      <a href="#support"> Support</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="widget footer-widget">
-                <h4 className="widget-title">Quick Links</h4>
-                <ul className="nav-widget clearfix">
-                  <li>
-                    <a href="http://localhost/hotelbooking/about-us">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="http://localhost/hotelbooking/terms-&-conditions">
-                      Terms &amp; Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a href="http://localhost/hotelbooking/faqs">FAQs</a>
-                  </li>
-                  <li>
-                    <a href="http://localhost/hotelbooking/contact">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="http://localhost/hotelbooking/gallery">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="http://localhost/hotelbooking/services">
-                      Services
-                    </a>
-                  </li>
-                </ul>
+            <div className="col-lg-3 footer-contact-list mt-lg-0 mt-md-5 mt-4">
+              <h6 className="footer-title-29">Social Media</h6>
+              <div className="main-social-footer-29">
+                <a href="#facebook" className="facebook">
+                  <i className="fab fa-facebook-f" />
+                </a>
+                <a href="#twitter" className="twitter">
+                  <i className="fab fa-twitter" />
+                </a>
+                <a href="#google">
+                  <i className="fab fa-google-plus-g" />
+                </a>
+                <a href="#instagram" className="instagram">
+                  <i className="fab fa-instagram" />
+                </a>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="widget footer-widget">
-                <h4 className="widget-title">Recent Blogs</h4>
-                <ul className="recent-post">
-                  <li>
-                    <h6>
-                      <a href="blog_details/16/top-10-things-to-do-in-melbourne-with-kids.html">
-                        Top 10 Things to Do in Melbourne With Ki...
-                      </a>
-                    </h6>
-                    <span className="recent-post-date">June 14, 2021</span>
-                  </li>
-                  <li>
-                    <h6>
-                      <a href="blog_details/15/unique-travel-ideas-that-don%e2%80%99t-involve-a-hotel.html">
-                        Unique Travel Ideas That Don’t Involve a...
-                      </a>
-                    </h6>
-                    <span className="recent-post-date">June 14, 2021</span>
-                  </li>
-                  <li>
-                    <h6>
-                      <a href="blog_details/14/the-best-beaches-in-the-philippines.html">
-                        The Best Beaches in the Philippines
-                      </a>
-                    </h6>
-                    <span className="recent-post-date">June 14, 2021</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <div className="row">
-            <div className="col-md-12">
-              <p className="copy-right text-center"></p>
-              <p>
-                <span
-                  style={{
-                    color: "rgb(34,34,34)",
-                    fontFamily:
-                      'consolas, "lucida console", "courier new", monospace',
-                    fontSize: 12,
-                  }}
-                >
-                  Copyright ©2020. All Rights Reserved
-                </span>
-                <br />
+              {/* copyright */}
+              <p className="copy-footer-29 mt-4">
+                © 2021 Marketplace. All rights reserved. Design by{" "}
+                <a href="https://w3layouts.com/" target="_blank">
+                  W3Layouts
+                </a>
               </p>
-              <p />
             </div>
           </div>
         </div>

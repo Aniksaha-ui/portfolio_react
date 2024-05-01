@@ -26,55 +26,158 @@
     -->
     <title>React App</title>
 
+    <!-- google-fonts -->
     <link
-         rel="shortcut icon"
-         type="image/png"
-         href="%PUBLIC_URL%/assets/img/1630130004.png"
-         >
-      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/jquery-ui.min.css">
-      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/plugins.min.css">
-      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/default.css">
-      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/main.css">
-      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/responsive.css">
-      <link
-         rel="stylesheet"
-         href="%PUBLIC_URL%/assets/css/base-color2933.css?color1=FEA116&amp;color2=0F172B"
-         >
-      <style>
-         .breadcrumb-area::after {
-         background-color: #0F172B;
-         opacity: 0.76;
-         }
-      </style>
+      href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- //google-fonts -->
+    <!-- Font-Awesome-Icons-CSS -->
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%/assets/css/fontawesome-all.min.css"
+    />
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/style-starter.css" />
+    <style>
+      .breadcrumb-area::after {
+        background-color: #0f172b;
+        opacity: 0.76;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
-    <script src="%PUBLIC_URL%/assets/js/modernizr-3.6.0.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/jquery-3.4.1.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/popper.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/bootstrap.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/jquery-ui.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/plugins.min.js"></script>
+
+    <!-- common jquery plugin -->
+    <script src="%PUBLIC_URL%/assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- banner image moving effect -->
     <script>
-       "use strict";
-       var rtl = 0;
+      var lFollowX = 0,
+        lFollowY = 0,
+        x = 0,
+        y = 0,
+        friction = 1 / 30;
+
+      function animate() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+
+        translate = "translate(" + x + "px, " + y + "px) scale(1.1)";
+
+        $(".banner-image").css({
+          "-webit-transform": translate,
+          "-moz-transform": translate,
+          transform: translate,
+        });
+
+        window.requestAnimationFrame(animate);
+      }
+
+      $(window).on("mousemove click", function (e) {
+        var lMouseX = Math.max(
+          -100,
+          Math.min(100, $(window).width() / 2 - e.clientX)
+        );
+        var lMouseY = Math.max(
+          -100,
+          Math.min(100, $(window).height() / 2 - e.clientY)
+        );
+        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 100;
+      });
+
+      animate();
     </script>
-    <script src="%PUBLIC_URL%/assets/js/main.js"></script>
-    <script type="text/javascript">
-       var whatsapp_popup = 1;
-       var whatsappImg = "%PUBLIC_URL%/assets/img/whatsapp.svg";
-       $(function () {
-       $('#WAButton').floatingWhatsApp({
-       phone: "+8801689583182", //WhatsApp Business phone number
-       headerTitle: "Hi, There!", //Popup Title
-       popupMessage: `If you have any issues, let us know`, //Popup Message
-       showPopup: whatsapp_popup == 1 ? true : false, //Enables popup display
-       buttonImage: '<img src="' + whatsappImg + '" />', //Button Image
-       position: "right" //Position: left | right
-       });
-       });
+    <!-- //banner image moving effect -->
+
+    <!-- magnific popup -->
+    <script src="%PUBLIC_URL%/assets/js/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: "inline",
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: "auto",
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in",
+        });
+
+        $(".popup-with-move-anim").magnificPopup({
+          type: "inline",
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: "auto",
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-slide-bottom",
+        });
+      });
     </script>
-    <script src="%PUBLIC_URL%/assets/js/home.js"></script>
+    <!-- //magnific popup -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="%PUBLIC_URL%/assets/js/theme-change.js"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+          $("#site-header").addClass("nav-fixed");
+        } else {
+          $("#site-header").removeClass("nav-fixed");
+        }
+      });
+
+      //Main navigation Active Class Add Remove
+      $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+      });
+      $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+        });
+      });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+      $(function () {
+        $(".navbar-toggler").click(function () {
+          $("body").toggleClass("noscroll");
+        });
+      });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- bootstrap -->
+    <script src="%PUBLIC_URL%/assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
   </body>
 </html>
