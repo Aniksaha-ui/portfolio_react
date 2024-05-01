@@ -18,16 +18,16 @@ const Home = () => {
   }, []);
 
   const fetchData = async () => {
-    const homePageInformation = await api.homePageInformation();
-    if (homePageInformation) {
-      await setServiceSection(homePageInformation.whyus);
-      await setAboutUsSection(homePageInformation.aboutUs);
-      await setServices(homePageInformation.ourservices);
-      await setLearning(homePageInformation.learnings);
-      await setLatestBlog(homePageInformation.latestBlogs);
-      // await setLoading(false);
-    } else {
-    }
+    // const homePageInformation = await api.homePageInformation();
+    // if (homePageInformation) {
+    //   await setServiceSection(homePageInformation.whyus);
+    //   await setAboutUsSection(homePageInformation.aboutUs);
+    //   await setServices(homePageInformation.ourservices);
+    //   await setLearning(homePageInformation.learnings);
+    //   await setLatestBlog(homePageInformation.latestBlogs);
+    //   // await setLoading(false);
+    // } else {
+    // }
   };
 
   // if(loading){
