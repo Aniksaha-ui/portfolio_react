@@ -179,6 +179,11 @@ const useApi = () => {
     return response.data.data;
   }
 
+  const singleBlogInformation = async(blogId) =>{
+    const response = await axiosClient.apiClient("POST",'blogs/single',{blogId});
+    return response.data.data;
+  }
+
   /********************************Service Page Information **********/
   const servicePageInformation = async() =>{
     const response = await axiosClient.apiClient("GET",'api/service');
@@ -187,7 +192,8 @@ const useApi = () => {
 
   return {
      blogPageInformation,
-    servicePageInformation
+    servicePageInformation,
+    singleBlogInformation
   };
 };
 

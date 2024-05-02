@@ -9,6 +9,7 @@ import ServicePage from "./components/pages/ServicePage/ServicePage";
 import Contact from "./components/pages/Contact/Contact";
 import Login from "./components/pages/Login/Login";
 import Blogs from "./components/pages/Blogs/Blogs";
+import BlogDetails from "./components/pages/Blogs/BlogDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/service" element={<ServicePage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="blogs/details/:id" element={<BlogDetails />} />
             <Route path="/login" element={<Login />} />
           </Route>
         </Routes>

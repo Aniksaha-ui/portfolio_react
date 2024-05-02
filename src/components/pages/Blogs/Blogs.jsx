@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Learning from "../Home/learning"
 import Services from "../Home/services"
 import useApi from "../../../services/hooks/useApi";
+import { Link } from "react-router-dom";
 
 const Blogs = () =>{
 
@@ -14,10 +15,10 @@ const Blogs = () =>{
 
     const fetchBlogs = async ()=>{
         const blogInformation = await api.blogPageInformation();
-    if (blogInformation) {
-        await setBlogs(blogInformation);
-    } else {
-    }
+        if (blogInformation) {
+            await setBlogs(blogInformation);
+        } else {
+        }
     }
 
     return (
@@ -35,28 +36,23 @@ const Blogs = () =>{
             </p>
           </div>
           <div className="row">
-
             {blogs.map((blog,index) =>
-
                 <div className="col-lg-4 col-md-6 mt-4">
                 <div className="box-wrap">
                   <div className="icon">
                   <i className={`blue-clr-bg ${blog.icon_name}`} />
-                    {/* <i className={'blue-clr-bg' ${blog.icon_name}} /> */}
                   </div>
                   <h4 className="number">{index+1}</h4>
                   <h4>
                     <a href="#url">{blog.title}</a>
                   </h4>
                   <p dangerouslySetInnerHTML={{ __html: blog.description }}></p>
-                  <a href="#read" className="read">
+                  <Link to={`details/${blog.id}`} className="read">
                     Read more
-                  </a>
+                  </Link>
                 </div>
                 </div>
             )}
-        
-            
           </div>
         </div>
       </section>
