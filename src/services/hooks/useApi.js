@@ -174,9 +174,8 @@ const useApi = () => {
 
 
   /*********************************Home Page Information *************/
-  const homePageInformation = async() =>{
-    const response = await axiosClient.apiClient("GET",'api/homepage');
-    console.log(response,"res")
+  const blogPageInformation = async() =>{
+    const response = await axiosClient.apiClient("GET",'blogs');
     return response.data.data;
   }
 
@@ -187,7 +186,7 @@ const useApi = () => {
   }
 
   return {
-    homePageInformation,
+     blogPageInformation,
     servicePageInformation
   };
 };

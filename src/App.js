@@ -7,6 +7,8 @@ import Footer from "./components/common/footer/footer";
 import About from "./components/pages/About/About";
 import ServicePage from "./components/pages/ServicePage/ServicePage";
 import Contact from "./components/pages/Contact/Contact";
+import Login from "./components/pages/Login/Login";
+import Blogs from "./components/pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/service" element={<ServicePage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
         <Footer />
