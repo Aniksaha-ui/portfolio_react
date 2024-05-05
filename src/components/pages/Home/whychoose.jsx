@@ -23,9 +23,9 @@ const WhyChooseUs = ({ serviceSection }) => {
             </div>
           </div>
           <div className="col-xl-5 col-lg-6 offset-xl-1 mt-lg-0 mt-5 pt-lg-0 pt-5">
-            <h3 className="title-style">
-             My Job Expriences
-            </h3>
+            <h2 className="title-style">
+             My Expriences(2022- continue)
+            </h2>
             <p className="mt-lg-4 mt-3 mb-sm-5 mb-4">
             Experienced Software Engineer Specializing in ERP, Fintech, and International Payment Gateways with a Passion for Machine Learning.
             </p>
