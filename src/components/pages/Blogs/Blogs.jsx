@@ -46,7 +46,6 @@ const Blogs = () =>{
                   <h4>
                     <a href="#url">{blog.title}</a>
                   </h4>
-                  <p dangerouslySetInnerHTML={{ __html: blog.description }}></p>
                   <Link to={`details/${blog.id}`} className="read">
                     Read more
                   </Link>
