@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Services = ({ services }) => {
   return (
     <section className="about-section py-5">
@@ -7,11 +9,19 @@ const Services = ({ services }) => {
           style={{ maxWidth: 600 }}
         >
           <h3 className="title-style mb-2">
-            We Provides Shortage Remarkable Ideas!
+            My working invlovnce
           </h3>
           <p>
-            Ut aut reiciendis voluptatibus maiores alias consequatur aut
-            perferendis doloribus asperiores repellat.
+          As a software engineer with expertise in React, Angular, 
+          Dotnet Core, and Node.js, I offer a comprehensive range of 
+          professional software development services tailored to meet your
+           business needs. From consultation and project management to design, 
+           development, maintenance, and support, 
+           I can help you create custom web or mobile applications that 
+           are user-friendly and scalable. With my skills and experience, 
+           I can ensure your project is delivered on time and within budget. 
+           Let me help your business succeed through expert software development 
+           services. Contact me today to discuss your project requirements
           </p>
         </div>
         <div className="row justify-content-center text-center">
@@ -22,11 +32,11 @@ const Services = ({ services }) => {
               </div>
               <div className="about-content">
                 <h5 className="mb-2">
-                  <a href="about.html">Development</a>
+                  <Link to="/">Development</Link>
                 </h5>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit accusa
-                  ntium dolor emque laudan sit accusa.
+                Writing the actual code using programming languages javascript and php
+                 to implement the design and functionality of the software.
                 </p>
               </div>
             </div>
@@ -38,11 +48,10 @@ const Services = ({ services }) => {
               </div>
               <div className="about-content">
                 <h5 className="mb-2">
-                  <a href="about.html">Integration</a>
+                  <Link to="/">Maintenance</Link>
                 </h5>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit accusa
-                  ntium dolor emque laudan sit accusa.
+                  Providing ongoing support, updates, and enhancements to the software to address issues, add new features, and adapt to changing requirements over time
                 </p>
               </div>
             </div>
@@ -50,15 +59,15 @@ const Services = ({ services }) => {
           <div className="col-lg-4 col-md-6 mt-lg-0 mt-2">
             <div className="about-single p-3">
               <div className="about-icon mb-4">
+                
                 <i className="fas fa-shipping-fast blue-clr-bg" />
               </div>
               <div className="about-content">
                 <h5 className="mb-2">
-                  <a href="about.html">Branding</a>
+                  <a href="about.html">Testing</a>
                 </h5>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit accusa
-                  ntium dolor emque laudan sit accusa.
+                Conducting tests to identify and fix errors, bugs, and inconsistencies in the software to ensure its reliability, security, and performance.
                 </p>
               </div>
             </div>
