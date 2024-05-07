@@ -15,7 +15,7 @@ const Header = () => {
           <h1>
             <a className="navbar-brand" href="index.html">
               <i className="fab fa-mastodon" />
-              Infinity<span>codeHub</span>
+              Anik&nbsp;<span>Saha</span>
             </a>
           </h1>
           {/* if logo is image enable this   
