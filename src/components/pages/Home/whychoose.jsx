@@ -6,49 +6,48 @@ const WhyChooseUs = ({ serviceSection }) => {
           <div className="col-lg-6 position-relative home-block-3-left pb-lg-0 pb-5">
             <div className="position-relative">
               <img
-                src="assets/images/home1.jpg"
+                src="assets/images/edu.jpg"
                 alt
                 className="img-fluid radius-image"
               />
             </div>
             <div className="imginfo__box">
-              <h6 className="imginfo__title">Get a Price Quote Today!</h6>
+              <h6 className="imginfo__title">Want to hire me?</h6>
               <p>
-                Nemo enim ipsam oluptatem quia oluptas
-                <br /> sit aspernatur aut odit aut fugit.{" "}
+               you can send a email  at sahaanik1045@gmail.com <br/> or 
+               <br /> Contact me following email
               </p>
-              <a href="tel:http://1(800)7654321">
-                <span className="fa fa-phone mr-2" /> 1-800-654-3210
+              <a href="tel:http://01628781323">
+                <span className="fa fa-phone mr-2" /> 01628781323
               </a>
             </div>
           </div>
           <div className="col-xl-5 col-lg-6 offset-xl-1 mt-lg-0 mt-5 pt-lg-0 pt-5">
-            <h3 className="title-style">
-              We have business skills that will increase your earnings
-            </h3>
+            <h2 className="title-style">
+             My Expriences(2022- continue)
+            </h2>
             <p className="mt-lg-4 mt-3 mb-sm-5 mb-4">
-              Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-              ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit.
+            Experienced Software Engineer Specializing in ERP, Fintech, and International Payment Gateways with a Passion for Machine Learning.
             </p>
             <div className="two-grids mt-md-0 mt-md-5 mt-4">
               <div className="grids_info">
                 <i className="fas fa-user-clock primary-clr-bg" />
                 <div className="detail">
-                  <h4>Start your own business in minutes</h4>
+                  <h4>ERA Infotech Ltd</h4>
                   <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit.
+                    ERA Infotech Limited is a leading IT 
+                    services company developing business solutions 
+                    and services for banks, non-bank financial institutions
+                   (NBFIs), corporations as well as the Government Sector.
                   </p>
                 </div>
               </div>
               <div className="grids_info mt-5">
                 <i className="fas fa-laptop-house green-clr-bg" />
                 <div className="detail">
-                  <h4>Open a business account online</h4>
+                  <h4>SSL Wireless</h4>
                   <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit.
+                    Fintech company which provide a international payment getaway system.
                   </p>
                 </div>
               </div>
